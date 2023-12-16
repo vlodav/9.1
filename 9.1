@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+void srednee(double& a, double& b, double& c, double& sredneesize)
+{
+    sredneesize = (a + b + c) / 3;
+}
+
+int main()
+{
+    system("chcp 1251");
+    cout << "Сколько раз вы хотите найти среднее 3 чисел? ";
+    int kolvo;
+    cin >> kolvo;
+
+    int kolvo2 = 1;
+    while (kolvo2 <= kolvo)
+    {
+        cout << "Вы считаете: " << kolvo2 << " раз" << endl;
+
+        double sredneesize = 0;
+
+        double a;
+        cout << "Введите значение 1: ";
+        cin >> a;
+
+        double b;
+        cout << "Введите значение 2: ";
+        cin >> b;
+
+        double c;
+        cout << "Введите значение 3: ";
+        cin >> c;
+
+        srednee(a, b, c, sredneesize);
+
+        cout << "Среднее значение чисел: " << sredneesize << endl;
+        kolvo2++;
+    }
+
+    return 0;
+}
